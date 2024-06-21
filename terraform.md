@@ -7,6 +7,7 @@ Terraform is an infrastructure as code (IaC) tool developed by HashiCorp, which 
 
 The Terraform Command Line Interface (CLI), is a command-line tool that provides a simple way for users to interact with the infrastructure components defined in the Terraform configuration. It offers multiple commands, from initializing your terraform directory to planning, applying, and destroying infrastructure resources. With the Terraform CLI, you also have the ability to check outputs, do state-related operations, and even test different expressions.
 
+_____________________________________________________________________________________________________________
 
 ``terraform init`` - Initializes terraform in current directory. Only once per directory is enough.
 
@@ -22,6 +23,8 @@ The Terraform Command Line Interface (CLI), is a command-line tool that provides
 
 ``terraform init -verify-plugins=false`` - Initialize the working directory, do not verify plugins for Hashicorp signature.
 
+______________________________________________________________________________________________________________
+
 ``terraform get`` - Download and installs modules needed for the configuration. Note- this is usually not required as this is part of the ``terraform init`` command.
 
 ``terraform get -update`` - Check the versions of the already installed modules against the available modules and installs the newer versions if available.
@@ -29,6 +32,8 @@ The Terraform Command Line Interface (CLI), is a command-line tool that provides
 ``terraform validate`` - To check whether the configurations are valid in the directory and does not access any remote state or services.
 
 ``terraform validate -json`` - To see easier the number of errors and warnings that you have.
+
+___________________________________________________________________________________________________________________
 
 ``terraform plan`` - Review the configuration and verify the resources that terraform is going to create or update. It will generate a execution plan showing you what actions will be taken without actually performing the planned actions.
 
@@ -52,11 +57,15 @@ The Terraform Command Line Interface (CLI), is a command-line tool that provides
 
 ``terraform apply -target=”module.appgw.0"`` - Apply changes only to the targeted resource.
 
+_________________________________________________________________________________________________________________________
+
 ``terraform destroy`` - Removes the resources that are created previously with the terraform configuration.
 
 ``terraform destroy -target=”module.appgw.0"`` - Destroy only the targeted resource.
 
 ``terraform destroy --auto-approve`` - Destroy the infrastructure without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
+
+_______________________________________________________________________________________________________________________________
 
 ``terraform refresh`` - Modify the state file with updated metadata containing information on the resources being managed in Terraform. Will not modify your infrastructure.
 
@@ -76,6 +85,8 @@ The Terraform Command Line Interface (CLI), is a command-line tool that provides
 
 ``terraform state show <resourcename>`` - Show the specified resource in the state file.
 
+___________________________________________________________________________________________________________________________________________________
+
 ``terraform -help`` - Get a list of available commands for execution with descriptions and can be used with any other subcommand to get more information.
 
 ``terraform fmt -help`` - Displays help option for the fmt command.
@@ -88,6 +99,8 @@ The Terraform Command Line Interface (CLI), is a command-line tool that provides
 
 ``terraform fmt --diff`` - Displays differences between original configuration files and formatting changes.
 
+_________________________________________________________________________________________________________________________________________________
+
 ``terraform workspace show`` — Show the name of the current workspace.
 
 ``terraform workspace list`` — List your workspaces.
@@ -99,6 +112,8 @@ The Terraform Command Line Interface (CLI), is a command-line tool that provides
 ``terraform workspace delete <workspace name>`` — Delete a specified workspace.
 
 ``terraform fmt --check`` - Useful in automation CI/CD pipelines, the check flag can be used to ensure the configuration files are formatted correctly, if not the exit status will be non-zero. If files are formatted correctly, the exit status will be zero.
+
+_______________________________________________________________________________________________________________________________________________
 
 ``terraform output`` — List all the outputs currently held in your state file. These are displayed by default at the end of a terraform apply, this command can be useful if you want to view them independently.
 
