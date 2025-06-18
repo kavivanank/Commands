@@ -23,6 +23,8 @@ ________________________________________________________________________________
 
 ``terraform init -verify-plugins=false`` - Initialize the working directory, do not verify plugins for Hashicorp signature.
 
+``terraform init -reconfigure`` - Initialize the working directory with new state or account.
+
 ______________________________________________________________________________________________________________
 
 ``terraform get`` - Download and installs modules needed for the configuration. Note- this is usually not required as this is part of the ``terraform init`` command.
