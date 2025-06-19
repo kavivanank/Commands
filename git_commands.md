@@ -85,18 +85,26 @@
 `git push origin --tags` - Pushes all tags to the remote repository.
 
 
-Here's your step-by-step DevOps-ready guide to:
+### Here's your step-by-step DevOps-ready guide to:
 
 ✅ Clone a GitHub repo into VS Code,
+
 ✅ Create a local branch,
+
 ✅ Work on it,
+
 ✅ Push changes back to GitHub on the new branch.
 
 `git clone <repo-url>`
+
 `cd repo-name`
+
 `git checkout -b feature/my-new-branch`
+
 `git add .`
+
 `git commit -m "My changes"`
+
 `git push -u origin feature/my-new-branch`
 
 
