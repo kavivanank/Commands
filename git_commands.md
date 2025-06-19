@@ -83,3 +83,73 @@
 `git tag -a <tag> -m "msg"` - Creates an annotated tag with a message.
 
 `git push origin --tags` - Pushes all tags to the remote repository.
+
+
+Here's your step-by-step DevOps-ready guide to:
+
+✅ Clone a GitHub repo into VS Code,
+✅ Create a local branch,
+✅ Work on it,
+✅ Push changes back to GitHub on the new branch.
+
+`git clone <repo-url>`
+`cd repo-name`
+`git checkout -b feature/my-new-branch`
+`git add .`
+`git commit -m "My changes"`
+`git push -u origin feature/my-new-branch`
+
+
+# Git Scenarios with Commands
+
+### Undo local changes to a file
+```bash
+git checkout -- filename
+```
+
+### Undo a commit that hasn’t been pushed
+```bash
+git reset --soft HEAD~1
+```
+
+### Undo a pushed commit safely (create a reverse commit)
+```bash
+git revert <commit-hash>
+```
+
+### Delete a local branch
+```bash
+git branch -d feature/old-branch
+```
+
+### Delete a remote branch
+```bash
+git push origin --delete feature/old-branch
+```
+
+### See who changed a specific line in a file
+```bash
+git blame filename
+```
+
+### See all commits on a branch
+```bash
+git log --oneline
+```
+
+### Switch back to main/master
+```bash
+git checkout main
+```
+
+### Test a bug fix without losing current work
+```bash
+git stash
+# do your fix
+git stash pop
+```
+
+### Link your local repo to a new remote
+```bash
+git remote add origin https://github.com/user/repo.git
+```
