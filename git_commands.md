@@ -28,6 +28,8 @@
 
 `git push` - Pushes local commits to the remote repository.
 
+`git push --set-upstream origin <new-local-branch-name>` - Creates a new branch from local to remote and push the commits.
+
 `git reset <file>` - Unstages a file while retaining changes.
 
 `git reset --hard` - Resets working directory and index to the last commit.
